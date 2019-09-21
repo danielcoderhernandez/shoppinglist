@@ -42,7 +42,7 @@ function setDeleteButtonEvent(id) {
 
 function createListItemHtml(itemName, itemAmount, id) {
 	return `<li id="item${id}">
-					${itemName.value} - ${itemAmount.value}
+					${itemName} - ${itemAmount}
 					<button id="button${id}" type="button">Delete Item</button>
 			</li>`;
 }
