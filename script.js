@@ -10,15 +10,7 @@ function initShoppingList() {
 	});
 }
 
-function handleItemForm(event, formRef) {
-		if(event.preventDefault) {
-			event.preventDefault();
-	}
 
-	addItemToShoppingList();
-	formRef.reset();
-	return false;
-}
 
 function addItemToShoppingList() {
 	let itemName = document.getElementById("item-name");
