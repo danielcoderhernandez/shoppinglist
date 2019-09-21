@@ -10,7 +10,15 @@ function initShoppingList() {
 	});
 }
 
+function handleItemForm(event, formRef) {
+	if(event.preventDefault) {
+		event.preventDefault();
+	}
 
+	addItemToShoppingList();
+	formRef.reset();
+	return false;
+}
 
 function addItemToShoppingList() {
 	let itemName = document.getElementById("item-name");
@@ -32,7 +40,7 @@ function setDeleteButtonEvent(id) {
 	});
 }
 
-function createListItemHtml(itemName, itemAmount) {
+function createListItemHtml(itemName, itemAmount, id) {
 	return `<li id="item${id}">
 					${itemName.value} - ${itemAmount.value}
 					<button id="button${id}" type="button">Delete Item</button>
